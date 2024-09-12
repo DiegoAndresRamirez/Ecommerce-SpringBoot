@@ -2,6 +2,8 @@ package com.riwi.ecommerce.domain.repositories;
 
 import com.riwi.ecommerce.domain.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ProductRepository extends JpaRepository<Long, Product> {
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }
