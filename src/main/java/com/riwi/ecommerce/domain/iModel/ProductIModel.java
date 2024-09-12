@@ -1,17 +1,15 @@
 package com.riwi.ecommerce.domain.iModel;
 
+
+import com.riwi.ecommerce.domain.entities.Product;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface ProductIModel {
-
-    void reduceStock(Long productId, int quantity);
-
-    void increaseStock(Long productId, int quantity);
-
-    boolean hasSufficientStock(Long productId, int quantity);
-
-    Double getPrice(Long productId);
-
-    void applyDiscount(Long productId, Double discountPercentage);
-
-    void associateWithInvoice(Long productId, Long invoiceId);
-
+    Product createProduct(Product Product);
+    List<Product> getAllProducts();
+    Optional<Product> getProductById(Long ProductId);
+    Product updateProduct(Product Product);
+    void deleteProduct(Long ProductId);
 }

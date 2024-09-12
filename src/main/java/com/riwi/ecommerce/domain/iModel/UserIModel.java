@@ -1,17 +1,15 @@
 package com.riwi.ecommerce.domain.iModel;
 
 import com.riwi.ecommerce.domain.entities.Bill;
+import com.riwi.ecommerce.domain.entities.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserIModel {
-    List<Bill> getBills(Long userId);
-
-    Double calculateTotalSpent(Long userId);
-
-    boolean hasUnpaidInvoices(Long userId);
-
-    void updateUserData(Long userId, String name, String email);
-
-    boolean isEmailUnique(String email);
+    User createUser(User user);
+    List<User> getAllUsers();
+    Optional<User> getUserById(Long userId);
+    User updateUser(User user);
+    void deleteUser(Long userId);
 }

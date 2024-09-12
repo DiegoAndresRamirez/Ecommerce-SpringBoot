@@ -1,23 +1,14 @@
 package com.riwi.ecommerce.domain.iModel;
 
-import com.riwi.ecommerce.domain.entities.Product;
-import com.riwi.ecommerce.domain.entities.User;
+import com.riwi.ecommerce.domain.entities.Bill;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BillIModel {
-
-    Double calculateTotal(Long billId);
-
-    void markAsPaid(Long billId);
-
-    boolean isPending(Long billId);
-
-    void addProduct(Long billId, Long productId, int quantity);
-
-    void removeProduct(Long billId, Long productId);
-
-    List<Product> getProducts(Long billId);
-
-    User getUser(Long billId);
+    Bill createBill(Bill Bill);
+    List<Bill> getAllBills();
+    Optional<Bill> getBillById(Long BillId);
+    Bill updateBill(Bill Bill);
+    void deleteBill(Long BillId);
 }
