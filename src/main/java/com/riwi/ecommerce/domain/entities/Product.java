@@ -18,6 +18,8 @@ public class Product {
 
     private String nombre;
 
+    private Integer stock;
+
     private Double price;
 
     @ManyToMany(mappedBy = "productos")
