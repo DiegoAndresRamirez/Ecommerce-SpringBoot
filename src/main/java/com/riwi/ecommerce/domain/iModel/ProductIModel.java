@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductIModel {
-    Product createProduct(Product Product);
+    Product createProduct(Product product);
     List<Product> getAllProducts();
-    Optional<Product> getProductById(Long ProductId);
-    Product updateProduct(Product Product);
-    void deleteProduct(Long ProductId);
+    Optional<Product> getProductById(Long productId);
+    Product updateProduct(Product product);
+    void deleteProduct(Long productId);
 }

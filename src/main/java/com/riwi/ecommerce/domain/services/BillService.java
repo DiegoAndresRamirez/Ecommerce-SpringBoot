@@ -4,12 +4,12 @@ import com.riwi.ecommerce.domain.entities.Bill;
 import com.riwi.ecommerce.domain.iModel.BillIModel;
 import com.riwi.ecommerce.domain.repositories.BillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+@Service
 public class BillService implements BillIModel {
 
     @Autowired
